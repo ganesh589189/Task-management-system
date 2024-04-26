@@ -68,14 +68,14 @@
       margin-bottom: 20px; /* Add margin at the bottom of the images */
     }
 
-    .info-card-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-end; /* Align items to the right */
-      flex: 1 1 calc(30% - 40px); /* Set card container to take 30% of the available width, accounting for padding */
-      padding: 20px; /* Add padding for better spacing */
-    }
+  .info-card-container {
+  display: flex;
+  flex-direction: column; /* Arrange cards vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  flex: 1 1 calc(100% - 40px); /* Set card container to take full width, accounting for padding */
+  padding: 20px; /* Add padding for better spacing */
+}
 
     .info-card {
       width: 100%; /* Make cards occupy full width of their container */
@@ -135,7 +135,7 @@
     </div>
   </div>
   <div class="dashboard">
-    <img src="{% static 'dash.png' %}" alt="Task Management Image" style="width: 100%;">
+
   </div>
 </div>
 
