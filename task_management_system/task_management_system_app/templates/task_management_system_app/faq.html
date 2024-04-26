@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Management System - FAQ</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  h1 {
+    text-align: center;
+    color: blue;
+    margin-bottom: 30px;
+  }
+
+  .faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+  }
+
+  .question {
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .question::after {
+    content: "+";
+    margin-left: 5px;
+  }
+
+  .question.active::after {
+    content: "-";
+    margin-left: 5px;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Task Management System - FAQ</h1>
+
+  <div class="faq-item">
+    <div class="question">How do I create a new task?</div>
+    <p>Step 1. Start the "Create Basic Task" wizard.
+       Step 2. Name the task and give it a description.
+       Step 3. Choose when to execute the new task.
+       Step 4. Set the action that you want to be executed.
+       Step 5. Check the details of the new task and save it.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">Can I assign a task to multiple users?</div>
+    <p>
+      You cannot assign a single Jira issue (Task) to multiple users at a time. Best approach is to break the main Task by creating sub-tasks and then assign those sub tasks within the team as needed.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">How do I mark a task as complete?</div>
+    <p>Shift to the Task view by clicking Task in the Navigation Pane.
+Right clicking on a task you want to mark complete, and then select Mark Complete from the right-clicking menu.
+And then your selected task has been marked as complete, the item is displayed in gray strikethrough text.
+</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">How can I prioritize tasks?</div>
+    <p>Make a list of all your tasks and write down their deadlines and importance1234
+Use a priority matrix, a ranking system, or a goal-oriented approach to separate the urgent from the important tasks1234
+Stick to a schedule that reflects your priority tasks and avoid competing priorities234
+Tackle your most intense, high-effort tasks first and focus on one task at a time14</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">Can I set reminders for tasks?</div>
+    <p>
+      In Tasks, right-click a task, and then click Add Reminder. ...
+In the Custom dialog box, it’s a good idea to change the default Flag to text to a clear action so that when the reminder pop-up appears, the required action is obvious. ...
+The Reminder box is already checked, so enter the date and time when you want the reminder pop up to appear.
+    </p>
+  </div>
+
+  <!-- Add more questions as needed -->
+
+</div>
+
+</body>
+</html>

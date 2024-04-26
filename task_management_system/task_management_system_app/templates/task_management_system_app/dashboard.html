@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management Dashboard</title>
+  <style>
+    /* Basic styles for demonstration */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: blue;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navbar li {
+      margin-right: 20px;
+    }
+
+    .navbar li:last-child {
+      margin-right: 0;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #ddd;
+    }
+
+    /* Adjusted margin for the Login button */
+    .auth-buttons a:nth-child(1) {
+      margin-right: 10px; /* Add some margin between Login and Register buttons */
+    }
+
+    .dashboard-container {
+      display: flex;
+      flex-wrap: wrap; /* Allow cards and images to wrap to the next line */
+      align-items: flex-start; /* Align items to the top */
+    }
+
+    .dashboard {
+      padding: 20px;
+      flex: 1 1 calc(70% - 40px); /* Set image container to take 70% of the available width, accounting for padding */
+    }
+
+    .dashboard img {
+      width: 100%; /* Make images occupy full width of their container */
+      margin-bottom: 20px; /* Add margin at the bottom of the images */
+    }
+
+    .info-card-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end; /* Align items to the right */
+      flex: 1 1 calc(30% - 40px); /* Set card container to take 30% of the available width, accounting for padding */
+      padding: 20px; /* Add padding for better spacing */
+    }
+
+    .info-card {
+      width: 100%; /* Make cards occupy full width of their container */
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc; /* Add border */
+      border-radius: 8px;
+      margin-bottom: 20px; /* Add margin at the bottom of the cards */
+      box-sizing: border-box; /* Ensure border is included in the width */
+      transition: background-color 0.3s ease; /* Smooth transition for color change */
+    }
+
+    .info-card:hover {
+      background-color: lightblue; /* Change background color on hover */
+    }
+
+    @media only screen and (max-width: 768px) {
+      .dashboard-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+      }
+
+      .dashboard, .info-card-container {
+        flex: 1 1 100%; /* Make both containers occupy full width on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <h1>Task Management</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="{% url 'dashboard' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+      <li><a href="{% url 'faq' %}">FAQ</a></li>
+    </ul>
+  </nav>
+  <div class="auth-buttons">
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+  </div>
+</header>
+
+<div class="dashboard-container">
+  <div class="info-card-container">
+    <div class="info-card">
+      <h2>Task Management</h2>
+      <p>Task management is the process of effectively and efficiently tracking, managing, and executing the life cycle of a task or many tasks within a project, from inception to execution. The purpose of task management is to improve the decision-making, communication, efficiency, and effectiveness of a task or project.</p>
+    </div>
+    <div class="info-card">
+      <h2>Task Prioritization</h2>
+      <p>Task prioritization is the process of assigning order to tasks based on their urgency and importance. The goal is to improve your time management and productivity by focusing on and organizing the tasks you need to complete.</p>
+    </div>
+  </div>
+  <div class="dashboard">
+    <img src="{% static 'dash.png' %}" alt="Task Management Image" style="width: 100%;">
+  </div>
+</div>
+
+</body>
+</html>
